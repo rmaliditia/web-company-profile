@@ -1,0 +1,78 @@
+/* Background Start */
+body {
+  height: 100vh;
+  background: rgba(252, 210, 205, 1);
+  background: linear-gradient(
+    135deg,
+    rgba(252, 210, 205, 1) 15%,
+    rgba(189, 183, 213, 1) 65%
+  );
+  overflow: hidden;
+  font-family: "Poppins";
+  padding: 0 8% 0 8%;
+}
+
+#up {
+  z-index: -999;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 191, 255, 0.8) 0%,
+    rgba(0, 147, 233, 0.8) 100%
+  );
+  filter: blur(120px);
+  animation: scatter1 60s infinite alternate;
+}
+
+#left {
+  z-index: -999;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    0deg,
+    rgba(147, 112, 219, 0.8) 0%,
+    /* Ungu neon */ rgba(103, 58, 183, 0.8) 100%
+  );
+  filter: blur(120px);
+  animation: scatter3 80s infinite alternate;
+}
+
+@keyframes scatter1 {
+  0% {
+    top: 10%;
+    left: 10%;
+  }
+  50% {
+    top: 30%;
+    left: 40%;
+  }
+  100% {
+    top: 60%;
+    left: 80%;
+  }
+}
+
+@keyframes scatter3 {
+  0% {
+    top: 50%;
+    left: 80%;
+  }
+  50% {
+    top: 30%;
+    left: 40%;
+  }
+  100% {
+    top: 10%;
+    left: 10%;
+  }
+}
+/* Background End */
+
+.watch-home img {
+  width: 500px;
+}
