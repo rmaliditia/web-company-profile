@@ -20,12 +20,6 @@
     />
 
     <!-- Font Logo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -35,70 +29,156 @@
     <section id="up"></section>
     <section id="left"></section>
     <!-- Background End -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" data-bs-theme="light">
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- Brand -->
-        <div class="navbar-brand mb-0">
+    <!-- Navbar Start -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <!-- Brand Logo Start -->
+        <div class="navbar-brand mb-0 me-auto">
           <a href="#" class="navbar-brand">
-            <img src="img/logo.png" alt="Apple" width="125">
+            <img src="img/logo.png" alt="Apple" width="90" />
           </a>
         </div>
+        <!-- Brand Logo End -->
 
-        <!-- Navbar Menu -->
         <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarSupportedContent"
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
         >
-          <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">What's New</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Support</a>
-            </li>
-          </ul>
-        </div>
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="img/logo.png" alt="Apple" width="120" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
 
-        <!-- User -->
-          <button type="button" class="navbar-nav mb-2 mb-lg-0 btn btn-dark"><i class="bi bi-person-circle px-2"></i>Sign In</button>
-        </ul>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#homepage"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#whatsnew">What's New</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#product">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#reviews">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#support">Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Login Button Start -->
+        <a href="#" class="login-button"
+          ><i class="bi bi-person-circle px-2"></i>Log In</a
+        >
+        <!-- Login Button End -->
+        <!-- Hamburger Menu Start  -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Hamburger Menu End  -->
       </div>
     </nav>
     <!-- Navbar End -->
 
-    <!-- Homepage Start -->
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
-      <div class="row">
-        <div class="col">
-          <div class="row text-center">
-            <div class="row"><h2 class="fw-semibold">Kemampuan memukau yang terjangkau.</h2></div>
-            <div class="row"><h3 class="fs-5 fw-semibold"><i class="bi bi-apple"></i>Apple Watch SE</h3></div>
-            <div class="watch-home row mx-auto d-block"><img src="img/3jam-home.png" alt="Apple Watch Variant"></div>
-            <div class="row">
-              <div class="col">1</div>
-              <div class="col">1</div>
-              <div class="col">1</div>
-              <div class="col">1</div>
+    <!-- All Parent Start -->
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar"
+      data-bs-root-margin="-25% 0px -25%"
+      data-bs-smooth-scroll="true"
+      class="scrollspy"
+      tabindex="0"
+    >
+      <!-- Homepage Start -->
+      <section
+        id="homepage"
+        class="content-home container-fluid d-flex justify-content-center align-items-center"
+      >
+        <div class="row">
+          <div class="col">
+            <div class="row text-center">
+              <!-- Tagline Start -->
+              <div class="row">
+                <h2 class="tagline fw-semibold mb-3 fs-1 fs-md-2">
+                  Affordable, stunning capabilities.
+                </h2>
+              </div>
+              <!-- Tagline End -->
+              <div class="row align-items-center d-flex mb-4">
+                <h3 class="fs-5 fw-semibold">
+                  <i class="bi bi-apple pe-1"></i>Apple Watch SE
+                </h3>
+              </div>
+              <!-- Img Apple Watch SE Start -->
+              <div class="watch-home row mx-auto d-block mb-4">
+                <img src="img/3jam-home.png" alt="Apple Watch Variant" />
+              </div>
+              <!-- Img Apple Watch SE End -->
+              <!-- Spek Home Start -->
+              <div class="spek-home row text-dark rounded-5 py-3 mx-auto">
+                <div class="d-xl-flex justify-content-center col-4">
+                  <i class="display bi bi-smartwatch display-4"></i>
+                  <span class="ps-xl-3">
+                    <h4 class="fs-4 fw-bold">100 NITS</h4>
+                    <h5 class="fs-6 fw-semibold">RETINA DISPLAY</h5>
+                  </span>
+                </div>
+                <div class="d-xl-flex justify-content-center col-4">
+                  <i class="battery i bi-battery-full display-4"></i>
+                  <span class="ps-xl-3">
+                    <h4 class="fs-4 fw-bold">18 HOUR</h4>
+                    <h5 class="fs-6 fw-semibold">BATTERY LIFE</h5>
+                  </span>
+                </div>
+                <div
+                  class="d-xl-flex justify-content-center align-items-center col-4"
+                >
+                  <i class="processor bi bi-cpu-fill display-4"></i>
+                  <span class="ps-xl-3">
+                    <h4 class="fs-4 fw-bold">S8 SiP</h4>
+                    <h5 class="fs-6 fw-semibold">PROCESSOR CHIP</h5>
+                  </span>
+                </div>
+              </div>
+              <!-- Spek Home Start -->
             </div>
           </div>
-      </div>
-      </div>
+        </div>
+      </section>
+      <!-- Homepage End -->
+      <!-- What's New Start -->
+      <section id="whatsnew" class="">
+        <h1>whatsnew</h1>
+      </section>
+      <!-- What's New End -->
     </div>
-    <!-- Homepage End -->
-
+    <!-- All Parent End -->
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

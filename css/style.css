@@ -1,20 +1,22 @@
 /* Background Start */
 body {
-  height: 100vh;
   background: rgba(252, 210, 205, 1);
   background: linear-gradient(
     135deg,
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Poppins";
-  padding: 0 8% 0 8%;
+  padding: 0 10% 0 10%;
+  height: 2000px;
 }
 
 #up {
   z-index: -999;
   position: absolute;
+  left: 0;
+  top: 50%;
   height: 300px;
   width: 300px;
   border-radius: 50%;
@@ -24,7 +26,7 @@ body {
     rgba(0, 147, 233, 0.8) 100%
   );
   filter: blur(120px);
-  animation: scatter1 60s infinite alternate;
+  /* animation: scatter1 60s infinite alternate; */
 }
 
 #left {
@@ -32,20 +34,22 @@ body {
   position: absolute;
   height: 300px;
   width: 300px;
+  top: 50%;
+  right: 0;
   border-radius: 50%;
   background: linear-gradient(
     0deg,
     rgba(147, 112, 219, 0.8) 0%,
-    /* Ungu neon */ rgba(103, 58, 183, 0.8) 100%
+    rgba(103, 58, 183, 0.8) 100%
   );
   filter: blur(120px);
-  animation: scatter3 80s infinite alternate;
+  /* animation: scatter3 80s infinite alternate; */
 }
 
 @keyframes scatter1 {
   0% {
-    top: 10%;
-    left: 10%;
+    top: 50%;
+    left: 0%;
   }
   50% {
     top: 30%;
@@ -60,19 +64,155 @@ body {
 @keyframes scatter3 {
   0% {
     top: 50%;
-    left: 80%;
+    right: 0%;
   }
   50% {
     top: 30%;
-    left: 40%;
+    right: 40%;
   }
   100% {
-    top: 10%;
-    left: 10%;
+    top: 60%;
+    right: 80%;
   }
 }
 /* Background End */
 
-.watch-home img {
-  width: 500px;
+/* Navigation Bar Start */
+.navbar {
+  background-color: rgb(255, 255, 255);
+  margin: 1rem;
+  border-radius: 0.7rem;
 }
+
+.login-button {
+  transition: all 400ms ease;
+  background-color: #212121;
+  color: white;
+  padding: 9px 13px 9px 3px;
+  text-decoration: none;
+  font-size: 0.7rem;
+  border-radius: 0.7rem;
+  margin-right: -0.25rem;
+}
+.login-button:hover {
+  background-color: #343434;
+}
+
+.navbar-toggler {
+  border: 0;
+  font-size: 1.25rem;
+  color: #212121;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-brand {
+  padding-top: 0;
+}
+
+.nav-link {
+  color: #5e5e5e;
+  font-weight: 400;
+  font-size: 0.88rem;
+}
+
+.nav-link:hover {
+  color: #212121;
+}
+
+.nav-link.active {
+  color: #212121;
+  font-weight: 500;
+}
+
+/* Navigation Bar End */
+/* Homepage Start */
+
+.content-home {
+  padding: 6rem 1rem 1rem 1rem;
+  height: 100vh;
+}
+
+.watch-home img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.spek-home {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.27);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 3rem 1rem;
+  margin: 0 1rem;
+}
+
+.spek-home span {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+
+.spek-home h4,
+.spek-home h5 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .spek-home span {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .spek-home {
+    margin: 0 0.5rem;
+  }
+
+  .spek-home .col {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .row {
+    margin: 0;
+  }
+
+  .content-home {
+    padding: 8rem 1rem 1rem 1rem;
+    height: max-content;
+  }
+
+  .spek-home {
+    gap: 1.5rem;
+  }
+
+  .spek-home .col-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .display,
+  .battery,
+  .processor {
+    font-size: 3rem;
+  }
+
+  .spek-home h4 {
+    font-size: 1.3rem !important;
+  }
+
+  .spek-home h5 {
+    font-size: 1rem !important;
+  }
+}
+/* Homepage End */
+
+/* Whats New Start */
+
+/* Whats New End */
