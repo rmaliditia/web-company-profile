@@ -10,3 +10,14 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     this.classList.add("active");
   });
 });
+
+// Toast Bootstrap
+const toastTrigger = document.getElementById("liveToastBtn");
+const toastLiveExample = document.getElementById("liveToast");
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  toastTrigger.addEventListener("click", () => {
+    toastBootstrap.show();
+  });
+}
