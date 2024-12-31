@@ -21,3 +21,11 @@ if (toastTrigger) {
     toastBootstrap.show();
   });
 }
+
+// Toooltip Start
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
