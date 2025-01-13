@@ -12,6 +12,10 @@
     url("../fonts/Poppins-Regular.ttf") format("ttf");
 }
 /* Background Start */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #fcd2cd;
   background: linear-gradient(
